@@ -1,0 +1,65 @@
+<h1>Background image</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <style>
+     body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url('/content/dam/assetexample/IMG_20210719_121951_465.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+	}
+    .teaser {
+            float:center;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            max-width: 3s00px;
+            margin: 20px auto;
+        }
+
+        .teaser-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color:blue;
+        }
+
+        .teaser-text {
+            font-size: 1em;
+            margin-bottom: 20px;
+            color:red;
+        }
+
+        .teaser-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+<div class="teaser">
+    <div>Text:${properties.text}</div>
+    <div>Title:${properties.title}</div>
+    <button class="teaser-button">Read More</button>
+</div>
+</body>
+<script>
+    document.querySelector('.teaser-button').addEventListener('click', function() {
+        alert('Button clicked!');
+    });
+</script>

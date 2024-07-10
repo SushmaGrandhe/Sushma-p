@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Checkbox Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[dropdown]">
+    <content
+        granite:class="cmp-list__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <authorInfo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Author Info"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <well
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <author1
+                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        text="Author 1"
+                                                        value="author1">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-checkbox-showhide-target=".checkbox-showhide-target"/>
+                                                    </author1>
+                                                    <author2
+                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        text="Author 2"
+                                                        value="author2">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-checkbox-showhide-target=".checkbox-showhide-target"/>
+                                                    </author2>
+                                                    <author3
+                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        text="Author 3"
+                                                        value="author3&#xa;">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-checkbox-showhide-target=".checkbox-showhide-target"/>
+                                                    </author3>
+                                                    <author4
+                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        text="Author 4"
+                                                        value="author4">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-checkbox-showhide-target=".checkbox-showhide-target"/>
+                                                    </author4>
+                                                    <author5
+                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        text="Author 5"
+                                                        value="author5">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-checkbox-showhide-target=".checkbox-showhide-target"/>
+                                                    </author5>
+                                                    <author6
+                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        text="Author 6"
+                                                        value="author6">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-checkbox-showhide-target=".checkbox-showhide-target"/>
+                                                    </author6>
+                                                    <author7
+                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        text="Author 7"
+                                                        value="author7">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-checkbox-showhide-target=".checkbox-showhide-target"/>
+                                                    </author7>
+                                                    <author8
+                                                        granite:class="cq-dialog-checkbox-showhide"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        text="Author 8"
+                                                        value="author8">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-checkbox-showhide-target=".checkbox-showhide-target"/>
+                                                    </author8>
+                                                </items>
+                                            </well>
+                                            <author1
+                                                granite:class="hide checkbox-showhide-target"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidecheckboxvalue="author1"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Author 1 :  Information"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="First Name"
+                                                                name="./fname"/>
+                                                            <lname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Last Name"
+                                                                name="./lname"
+                                                                required="{Boolean}false"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </author1>
+                                            <author2
+                                                granite:class="hide list-option-listfrom-showhide-target"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidecheckboxvalue="author2"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Author 2 :  Information"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="First Name"
+                                                                name="./fname"/>
+                                                            <lname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Last Name"
+                                                                name="./lname"
+                                                                required="{Boolean}false"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </author2>
+                                            <author3
+                                                granite:class="hide list-option-listfrom-showhide-target"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidecheckboxvalue="author3"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Author 3 :  Information"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="First Name"
+                                                                name="./fname"/>
+                                                            <lname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Last Name"
+                                                                name="./lname"
+                                                                required="{Boolean}false"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </author3>
+                                            <author4
+                                                granite:class="hide list-option-listfrom-showhide-target"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidecheckboxvalue="author4"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Author 4 :  Information"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="First Name"
+                                                                name="./fname"/>
+                                                            <lname
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Last Name"
+                                                                name="./lname"
+                                                                required="{Boolean}false"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </author4>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </authorInfo>
+                    <author6
+                        granite:class="hide checkbox-showhide-target"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Author6"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        tab-id="author6">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidecheckboxvalue="author6"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                granite:class="coral-Heading coral-Heading--4"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                level="{Long}4"
+                                text="Author 6 :  Tab for Author6"/>
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <fname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="First Name"
+                                        name="./fname"/>
+                                    <lname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Last Name"
+                                        name="./lname"
+                                        required="{Boolean}false"/>
+                                </items>
+                            </well>
+                        </items>
+                    </author6>
+                    <author7
+                        granite:class="hide checkbox-showhide-target"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Author7"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidecheckboxvalue="author7"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                granite:class="coral-Heading coral-Heading--4"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                level="{Long}4"
+                                text="Author 7 :  Tab for Author7"/>
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <fname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="First Name"
+                                        name="./fname"/>
+                                    <lname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Last Name"
+                                        name="./lname"
+                                        required="{Boolean}false"/>
+                                </items>
+                            </well>
+                        </items>
+                    </author7>
+                    <author8
+                        granite:class="hide checkbox-showhide-target"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Author8"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidecheckboxvalue="author8"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                granite:class="coral-Heading coral-Heading--4"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                level="{Long}4"
+                                text="Author 8 :  Tab for Author8"/>
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <fname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="First Name"
+                                        name="./fname"/>
+                                    <lname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Last Name"
+                                        name="./lname"
+                                        required="{Boolean}false"/>
+                                </items>
+                            </well>
+                        </items>
+                    </author8>
+                    <author5
+                        granite:class="hide checkbox-showhide-target"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Author5"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            isTab="{Boolean}true"
+                            showhidecheckboxvalue="author5"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                granite:class="coral-Heading coral-Heading--4"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                level="{Long}4"
+                                text="Author 5 :  Tab for Author5"/>
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <fname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="First Name"
+                                        name="./fname"/>
+                                    <lname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Last Name"
+                                        name="./lname"
+                                        required="{Boolean}false"/>
+                                </items>
+                            </well>
+                        </items>
+                    </author5>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

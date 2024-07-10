@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login-container">
+        <button class="login-button" onclick="showAuthOptions()">Login</button>
+        <div id="auth-options" class="auth-options" style="display: none;">
+            <a href="#" class="auth-option google" onclick="loginWithGoogle()">Continue with Google</a>
+        </div>
+    </div>
+
+    <script>
+        function showAuthOptions() {
+            document.getElementById('auth-options').style.display = 'block';
+        }
+
+        function loginWithGoogle() {
+            const clientId = 'YOUR_GOOGLE_CLIENT_ID';
+            const redirectUri = 'YOUR_REDIRECT_URI';
+            const scope = 'email profile';
+            const responseType = 'token';
+          
+            window.location.href = authUrl;
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/sushma" mode="merge"/>
+    <filter root="/content/sushma" mode="merge"/>
+    <filter root="/content/dam/sushma" mode="merge"/>
+    <filter root="/content/experience-fragments/sushma" mode="merge"/>
+</workspaceFilter>

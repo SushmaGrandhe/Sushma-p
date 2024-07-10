@@ -1,0 +1,10 @@
+<h1>CarouselComponent</h1>
+<sly data-sly-use.carousel="sushma.adobe.aem.guides.core.models.CarouselSlingModel">
+<div data-sly-list="${carousel.multifield}">
+<div>Text:${item.text}</div>
+<div>Path:${item.path}</div>
+<div data-sly-list="${item.nestedmultifield}">
+<div>Texts:${item.texts}</div>
+</div>
+</div>
+</sly>

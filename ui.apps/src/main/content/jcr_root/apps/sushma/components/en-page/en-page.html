@@ -1,0 +1,13 @@
+<!-- en-page.html -->
+<div data-sly-use.enPageModel="sushma.adobe.aem.guides.core.models.ChildPagesModel">
+    <p>PathField: ${enPageModel.pathfield @ context='text'}</p>
+
+    <h3>Child Pages:</h3>
+    <ul>
+        <sly data-sly-list.childPage="${enPageModel.childPages}">
+            <li>
+                <a href="${childPage.path @ context='uri'}">${childPage.title @ context='text'}</a> (${childPage.path})
+            </li>
+        </sly>
+    </ul>
+</div>

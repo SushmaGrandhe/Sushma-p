@@ -1,0 +1,17 @@
+<!--<h1>Demo</h1>
+<p>FirstName:${properties.firstname}||${currentStyle.firstname}</p>
+
+<form action="/bin/example/ase" method="get">
+<h1>Query Builder</h1>
+<input type="submit" value="submit">
+</form>-->
+
+<!-- productdetails.html -->
+<sly data-sly-use.productDetailsModel="sushma.adobe.aem.guides.core.models.ProdDetails"/>
+
+<div class="product-details">
+    <h2>${productDetailsModel.productName}</h2>
+    <p>${productDetailsModel.productDescription}</p>
+    <p>Price: ${prodDetails.productPrice}</p>
+    <img src="${prodDetails.productImage}" alt="${prodDetails.productName}">
+</div>

@@ -1,0 +1,77 @@
+<div class="text-to-speech-component">
+    <div class="input-wrapper">
+        <p>${properties.text @ context='html'}</p>
+    </div>
+    <button id="convert-btn">Convert to Speech</button>
+    <audio id="audio-output" controls></audio>
+</div>
+<script src="${resource.path}/text-to-speech.js"></script>
+<link rel="stylesheet" href="${resource.path}/text-to-speech.css" />
+
+coral-multifield.geeks-multifield[aria-invalid=true]{
+  border: .15rem solid #e14132
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const convertBtn = document.getElementById("convert-btn");
+    const audioOutput = document.getElementById("audio-output");
+    const textElement = document.querySelector(".input-wrapper p");
+
+    convertBtn.addEventListener("click", function() {
+        const textContent = textElement ? textElement.innerText : '';
+
+        if (textContent.trim() === '') {
+            console.error('Text content is empty.');
+            return;
+        }
+
+        const requestPayload = {
+            text: textContent
+        };
+
+        // Fetch CSRF token
+        fetch('/libs/granite/csrf/token.json', { credentials: 'include' })
+            .then(response => response.json())
+            .then(data => {
+                const csrfToken = data.token;
+
+                fetch("/bin/integrate/tts", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "CSRF-Token": csrfToken // Include CSRF token in headers
+                    },
+                    body: JSON.stringify(requestPayload)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok. Status: ' + response.status + ' ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.audio_url) {
+                        audioOutput.src = data.audio_url;
+                        audioOutput.play();
+                    } else {
+                        console.error('Audio URL is missing in the response:', data);
+                    }
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem fetching the CSRF token:', error);
+            });
+    });
+});
+
+
+
+
+
+
+
+
+

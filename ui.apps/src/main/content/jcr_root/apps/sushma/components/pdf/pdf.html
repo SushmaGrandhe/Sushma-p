@@ -1,0 +1,53 @@
+<h1>pdf</h1>
+<div>Text:${properties.text}</div>
+<div>Title:${properties.title}</div>
+<div>Image:${properties.image}</div>
+<div>CheckBox:${properties.checkbox?'on':'off'}</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert to PDF</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <style>
+        .pdf-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .pdf-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <!-- Your webpage content goes here -->
+        <h1>Hello, World!</h1>
+        <p>This is a sample webpage content that will be converted to PDF.</p>
+        <!-- Add more content as needed -->
+    </div>
+    <button class="pdf-button" onclick="generatePDF()">Download as PDF</button>
+
+    <script>
+        function generatePDF() {
+            const element = document.body; // Select the entire body to convert the whole page
+            html2pdf(element, {
+                margin: 1,
+                filename: 'webpage.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            });
+        }
+    </script>
+</body>
+</html>

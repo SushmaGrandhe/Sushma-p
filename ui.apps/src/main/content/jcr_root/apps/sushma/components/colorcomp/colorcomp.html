@@ -1,0 +1,43 @@
+<h2>hello</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Display</title>
+<script>
+    function changeColor() {
+        var color = document.getElementById("color-selectors").getAttribute("colour");
+        document.getElementById("color-display").style.backgroundColor = color;
+    }
+</script>
+</head>
+<body>
+<div id="color-selectors" colour="${properties.colors}" oninput="changeColor()">
+    <!-- Your color selectors here -->
+</div>
+
+
+
+<div> Checkbox: ${properties.checkbox ? 'checked' : 'unchecked'} </div>
+
+<div data-sly-test.colors="${properties.checkbox}">
+
+<div id="color-display" style="width: 100px; height: 50px;">
+${properties.colors}
+</div>
+</div>
+
+
+<script>
+    // Initially call changeColor() to display the initial color
+    changeColor();
+
+    // Add an event listener to the color selector div to trigger changeColor() when the color changes
+    document.getElementById("color-selectors").addEventListener("input", function() {
+        changeColor();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<h1>Customized Component</h1>
+<sly data-sly-use.obj="sushma.adobe.aem.guides.core.models.CustomizeSlingModelEx">
+<p>Age:${obj.age}</p>
+<p>Date of Birth:${obj.dob}</p>
+<p>Email:${obj.email}</p>
+<p>Password:${properties.password}</p>
+<p>Subjects:${obj.subjects}</p>
+</sly>
+<div data-sly-resource="${'colorcomp' @ resourceType='wknd/components/colorcomp'}"></div>

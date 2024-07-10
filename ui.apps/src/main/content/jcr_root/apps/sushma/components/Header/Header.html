@@ -1,0 +1,16 @@
+<h1>Header Component</h1>
+
+<sly data-sly-use.obj="sushma.adobe.aem.guides.core.models.HeaderSlingModel">
+<div>PathField:${obj.pathfield}</div>
+<div>TextField:${obj.textfield}</div>
+<div>CheckBox:${obj.checkbox?'on':'off'}</div>
+<div data-sly-list="${obj.multifield}">
+<div>TextFields:${item.textfields}</div>
+<div>DatePicker:${item.datepicker}</div>
+</div>
+</sly>
+
+<sly data-sly-use.o="sushma.adobe.aem.guides.core.models.SlingforOsgiDataPintch">
+<div> URL :${o.url}</div>
+
+</sly>

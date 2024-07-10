@@ -1,0 +1,46 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='desktop10'}">
+</sly>
+
+
+<h1>Hello World Component</h1>
+
+
+<sly data-sly-use.obj="sushma.adobe.aem.guides.core.models.HelloWorldSlingModelEx">
+<div>First Name:${obj.firstname}</div>
+<div>Last Name:${obj.lastname}</div>
+</sly>
+
+
+<div data-sly-include="sample.html"></div>
+<sly data-sly-set.name="John">
+<p>Name=${name}</p>
+</sly>
+
+<sly data-sly-test="${properties.age&&properties.email}">
+<p>Age:${properties.age}</p>
+<p>Email:${properties.email}</p>
+</sly>
+
+<ul data-sly-repeat.variable="${properties.subjects}">
+<li>Index:${variableList.index}:Count:${variableList.count}:first:${variableList.first}:Middle:${variableList.middle}:Last:${variableList.last}</li>
+</ul>
+
+<ul data-sly-repeat.variable="${properties.subjects}">
+<li>Index:${variableList.index}:Count:${variableList.count}:first:${variableList.first}:Middle:${variableList.middle}:Last:${variableList.last}</li>
+</ul>
+
+<ul data-sly-list="${properties.subjects}">
+<li>${item}</li>
+</ul>
+
+<div data-sly-template.writeInfo>
+<p>Text:${properties.text}</p>
+<p>Age:${properties.age}</p>
+</div>
+<div data-sly-call="${writeInfo}"></div>
+
+<div data-sly-template.readInfo="${@text}">
+<p>Text:${text}</p>
+</div>
+<div data-sly-call="${readInfo @ text='text'}"></div>

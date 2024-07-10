@@ -1,0 +1,11 @@
+<div> Enable PII: ${properties.enablePII ? 'true' : 'false'} </div>
+<sly data-sly-test="${properties.enablePII == 'true'}">
+    <p class="disable">Css Class: ${properties.cssClass}</p>
+</sly>
+
+<!-- Add a hidden element to store the component path -->
+<input type="hidden" id="componentPath" value="${resource.path}" />
+
+<div>
+${properties.text @ context='html'}
+</div>

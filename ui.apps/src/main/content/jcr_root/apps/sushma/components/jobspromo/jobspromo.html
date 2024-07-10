@@ -1,0 +1,11 @@
+<h1>Jobs Promo</h1>
+<div data-sly-use.obj="sushma.adobe.aem.guides.core.models.JobsPromoSlingModel">
+    <p>Title: ${obj.title}</p>
+    <div data-sly-list.item="${obj.multifield3}">
+        <div>
+            <p>CardTitle: ${item.cardtitle}</p>
+            <p>CardDesc: ${item.carddesc}</p>
+        </div>
+    </div>
+</div>
+

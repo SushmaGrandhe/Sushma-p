@@ -1,0 +1,19 @@
+<h1>Multi Title Component</h1>
+
+<sly data-sly-use.obj="sushma.adobe.aem.guides.core.models.MultiTileSlingModel">
+
+<div>Title:${obj.title}</div>
+
+<div data-sly-list="${obj.multifield}">
+
+<div>TextFields:${item.textfields}</div>
+<div>PathField:${item.pathfield}</div>
+
+<div data-sly-list="${obj.multifields}">
+
+<div>RichText:${item.desc}</div>
+
+</div>
+</div>
+</sly>
+

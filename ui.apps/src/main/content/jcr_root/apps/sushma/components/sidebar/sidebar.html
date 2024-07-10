@@ -1,0 +1,34 @@
+<h1>Sidebar Component</h1>
+
+<div data-sly-use.obj= "sushma.adobe.aem.guides.core.models.Sidebarslingmodel">
+
+<h2>Header </h2>
+<div>Logo Path :${obj.logopath} </div>
+<div>LogoMobileimage :<img src="${obj.logomobileimage}"> </div>
+<div>Logo Link :<a href="${obj.logolink}">${obj.logolink}</a> </div>
+<div>Switch:${obj.checkbox ? 'on' : 'off'} </div>
+
+<h2>Region </h2>
+<div>Country:${obj.country}</div>
+
+<h2>Header Links </h2>
+<div data-sly-list="${obj.Day1}">
+<div>Name :${item.name} </div>
+<div>Image:<img src="${item.image}"> </div>
+</div>
+
+<h2>Sidebar Navigation  </h2>
+<div data-sly-list="${obj.Day2}">
+<div>Desk top icon:<img src="${item.getDesktopicon}"> </div>
+<div>Mobile Icon:<img src="${item.mobileicon}"> </div>
+
+<div data-sly-list.nesteditem="${item.getNested}">
+<div>navigation URL :<a href="${nesteditem.getNavigation}.html"> Nested </a></div>
+
+</div>
+</div>
+
+</div>
+
+
+

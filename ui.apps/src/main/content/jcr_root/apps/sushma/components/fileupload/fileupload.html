@@ -1,0 +1,23 @@
+<html>
+<body>
+ <h1>File Upload</h1>
+ <h2>Select File</h2>
+ <form id="uploadForm" enctype="multipart/form-data">
+ <input type="file" id="file" name="selectedfile" multiple><br><br>
+ <input type="button" value="Upload" onclick="uploadFile()">
+ </form>
+ <div id="response"></div>
+
+    <script>
+        function uploadFile() {
+            var form = document.getElementById('uploadForm');
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/bin/uploadexcel/ex', true);
+            xhr.onload = function() {
+            };
+            xhr.send(formData);
+        }
+    </script>
+</body>
+</html>
